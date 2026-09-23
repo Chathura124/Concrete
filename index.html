@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Concrete — a visual, beginner-friendly explainer for Concrete's DeFi yield infrastructure, vaults, security model and ecosystem." />
+  <title>Concrete — DeFi, Explained</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Concrete home">
+      <span class="brand-mark">C</span>
+      <span>CONCRETE</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#what">What is it?</a>
+      <a href="#how">How it works</a>
+      <a href="#vaults">Vaults</a>
+      <a href="#security">Security</a>
+      <a href="#learn">Learn</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☼</button>
+      <a class="button button-small" href="https://app.concrete.xyz/" target="_blank" rel="noreferrer">Launch App ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> DEFI LIQUIDITY METALAYER</div>
+        <h1>DeFi yield,<br><span class="accent">made concrete.</span></h1>
+        <p class="hero-lead">A visual guide to Concrete: automated vaults, strategy allocation, risk management and on-chain yield — without making DeFi feel like a maze.</p>
+        <div class="hero-buttons">
+          <a class="button" href="#what">Explore Concrete <span>↓</span></a>
+          <a class="button button-ghost" href="https://docs.concrete.xyz/" target="_blank" rel="noreferrer">Read Docs ↗</a>
+        </div>
+        <div class="hero-meta">
+          <span>UPDATED FOR 2026</span>
+          <span>•</span>
+          <span>INFORMATIONAL — NOT FINANCIAL ADVICE</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Stylized Concrete Moai illustration">
+        <div class="sun-ring"></div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="moai">
+          <div class="moai-brow"></div>
+          <div class="moai-eye left"></div>
+          <div class="moai-eye right"></div>
+          <div class="moai-nose"></div>
+          <div class="moai-mouth"></div>
+          <div class="moai-neck"></div>
+        </div>
+        <div class="floating-card card-yield">
+          <span>YIELD ENGINE</span>
+          <strong>Automated</strong>
+        </div>
+        <div class="floating-card card-risk">
+          <span>RISK</span>
+          <strong>Managed</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Concrete current website metrics">
+      <div><span>ASSETS ON PLATFORM</span><strong>$902.3M</strong></div>
+      <div><span>ASSETS PROCESSED</span><strong>$11.25B</strong></div>
+      <div><span>MODEL</span><strong>DEPOSIT → VAULT → YIELD</strong></div>
+      <div><span>STANDARD</span><strong>ERC-4626</strong></div>
+    </section>
+
+    <section id="what" class="section">
+      <div class="section-label">01 / THE IDEA</div>
+      <div class="split">
+        <div>
+          <h2>So, what exactly is <span class="accent">Concrete?</span></h2>
+        </div>
+        <div class="copy">
+          <p>Concrete is DeFi infrastructure designed to automate yield generation through vaults. Instead of manually moving capital between lending markets, staking opportunities and other strategies, a user can deposit into a vault and receive yield-bearing vault shares.</p>
+          <p>The current product is built around <strong>ERC-4626 vaults</strong>. Concrete's technology stack handles allocation between strategies, accounting updates and withdrawal processing, while users interact primarily with the vault.</p>
+        </div>
+      </div>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="number">01</span>
+          <h3>Deposit once</h3>
+          <p>Put a supported asset into a selected Concrete vault instead of managing several underlying positions yourself.</p>
+        </article>
+        <article class="concept-card">
+          <span class="number">02</span>
+          <h3>Strategies work</h3>
+          <p>Capital can be allocated across vetted on-chain strategies such as lending, staking or liquidity opportunities.</p>
+        </article>
+        <article class="concept-card">
+          <span class="number">03</span>
+          <h3>Receive shares</h3>
+          <p>You receive ERC-20 vault shares such as ctWBTC. Yield is reflected through the vault's exchange rate.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how" class="section dark-panel">
+      <div class="section-label">02 / HOW IT WORKS</div>
+      <div class="section-heading-row">
+        <div>
+          <h2>From asset to <span class="accent">yield.</span></h2>
+          <p class="muted">Think of a Concrete vault as an automated portfolio wrapper.</p>
+        </div>
+        <div class="flow-note">ONE DEPOSIT<br><span>→</span> AUTOMATED ALLOCATION<br><span>→</span> YIELD-BEARING SHARE</div>
+      </div>
+
+      <div class="flow">
+        <div class="flow-step">
+          <div class="flow-icon">₿</div>
+          <span>STEP 01</span>
+          <h3>Choose an asset</h3>
+          <p>Examples shown by Concrete include WBTC, USDe, USDT, weETH and other supported assets.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step highlight">
+          <div class="flow-icon">▦</div>
+          <span>STEP 02</span>
+          <h3>Deposit into a vault</h3>
+          <p>The vault accepts the designated underlying asset and deploys it according to its strategy configuration.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-icon">✦</div>
+          <span>STEP 03</span>
+          <h3>Earn + track</h3>
+          <p>Eligible vaults can accrue rewards and yield. Your vault shares represent your position.</p>
+        </div>
+      </div>
+
+      <div class="mini-diagram">
+        <div class="node user-node">YOUR ASSET</div>
+        <div class="line"></div>
+        <div class="node concrete-node">CONCRETE<br><small>VAULT</small></div>
+        <div class="branches">
+          <div class="branch"><span></span>LENDING</div>
+          <div class="branch"><span></span>STAKING</div>
+          <div class="branch"><span></span>LIQUIDITY</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vaults" class="section">
+      <div class="section-label">03 / VAULTS</div>
+      <div class="split">
+        <div>
+          <h2>Vaults are the<br><span class="accent">building blocks.</span></h2>
+        </div>
+        <div class="copy">
+          <p>Concrete describes its vaults as a way to package DeFi strategies into a simpler user experience. Vault shares are tokenized, which means the position can become useful elsewhere in the ecosystem.</p>
+          <p>Concrete's public materials also describe ecosystem-specific and institutional vault products, with strategy allocation handled behind the vault interface.</p>
+        </div>
+      </div>
+
+      <div class="vault-table">
+        <div class="table-head"><span>VAULT CONCEPT</span><span>WHAT IT DOES</span><span>USER GETS</span></div>
+        <div class="table-row"><span>ERC-4626 Vault</span><span>Accepts an underlying asset and deploys it into strategies</span><span>Yield-bearing shares</span></div>
+        <div class="table-row"><span>ct[ASSET]</span><span>Tokenized vault position representing deposited capital</span><span>ERC-20 vault share</span></div>
+        <div class="table-row"><span>Strategy Allocation</span><span>Routes capital across configured opportunities</span><span>Automated exposure</span></div>
+        <div class="table-row"><span>Rewards / Points</span><span>Tracks eligible rewards for supported campaigns</span><span>Additional incentives</span></div>
+      </div>
+    </section>
+
+    <section id="security" class="section security-section">
+      <div class="section-label">04 / SECURITY</div>
+      <div class="security-head">
+        <div>
+          <h2>Understand the <span class="accent">guardrails.</span></h2>
+          <p>Concrete's docs describe a layered security model. Audits reduce some classes of risk, but they do not make DeFi risk-free.</p>
+        </div>
+        <a class="button button-ghost" href="https://docs.concrete.xyz/Overview/welcome" target="_blank" rel="noreferrer">Read official docs ↗</a>
+      </div>
+
+      <div class="security-grid">
+        <article><span>01</span><h3>Separated roles</h3><p>Governance roles such as Vault Manager, Strategy Manager and Hook Manager are separated from automated operational roles.</p></article>
+        <article><span>02</span><h3>Custody controls</h3><p>Docs describe deposits being forwarded to a MultisigStrategy backed by Gnosis Safe or Fordefi MPC wallets.</p></article>
+        <article><span>03</span><h3>Bounded accounting</h3><p>Accounting updates are constrained by thresholds, cooldowns and validity windows.</p></article>
+        <article><span>04</span><h3>Independent monitoring</h3><p>Concrete documents Blockaid monitoring for real-time risk detection and a pre-delegated pause authority.</p></article>
+        <article><span>05</span><h3>Multiple reviews</h3><p>The docs list security work involving Halborn, Cantina, Zellic and Code4rena, with each review covering a defined scope/version.</p></article>
+        <article><span>06</span><h3>Risk still exists</h3><p>Concrete explicitly states that yields are not guaranteed and strategy losses can reduce share value, including possible loss of deposited assets.</p></article>
+      </div>
+    </section>
+
+    <section class="section blog-section" id="learn">
+      <div class="section-label">05 / LEARN</div>
+      <div class="section-heading-row">
+        <div>
+          <h2>Read the <span class="accent">source material.</span></h2>
+          <p class="muted">A few useful starting points from Concrete and its security documentation.</p>
+        </div>
+        <a class="text-link" href="https://paragraph.com/@concretexyz" target="_blank" rel="noreferrer">All Concrete posts ↗</a>
+      </div>
+
+      <div class="blog-grid">
+        <a class="blog-card featured" href="https://paragraph.com/@concretexyz/concrete-how-to-earn" target="_blank" rel="noreferrer">
+          <span>GUIDE</span>
+          <h3>Concrete: How to Earn</h3>
+          <p>Understand Earn Vaults, ERC-4626, ct[asset] shares and automated allocation.</p>
+          <b>Read article ↗</b>
+        </a>
+        <a class="blog-card" href="https://paragraph.com/@concretexyz/concrete-protocol-the-foundation-for-on-chain-credit" target="_blank" rel="noreferrer">
+          <span>PROTOCOL</span>
+          <h3>The Foundation for On-Chain Credit</h3>
+          <p>Concrete's original vision around credit, liquidation protection and the Probability Engine.</p>
+          <b>Read article ↗</b>
+        </a>
+        <a class="blog-card" href="https://paragraph.com/@concretexyz/A76uau9W5Sk7CinnWxDR" target="_blank" rel="noreferrer">
+          <span>BORROW</span>
+          <h3>Concrete: How to Borrow</h3>
+          <p>Learn the hub-and-spoke model, liquidation protection and bad-debt prevention concept.</p>
+          <b>Read article ↗</b>
+        </a>
+        <a class="blog-card" href="https://www.halborn.com/audits/blueprint-finance" target="_blank" rel="noreferrer">
+          <span>SECURITY</span>
+          <h3>Halborn Audit</h3>
+          <p>Go directly to the external security audit page for Blueprint Finance.</p>
+          <b>View audit ↗</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="section resources">
+      <div class="resource-box">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> OFFICIAL LINKS</div>
+          <h2>Go deeper into Concrete.</h2>
+        </div>
+        <div class="resource-links">
+          <a href="https://concrete.xyz/" target="_blank" rel="noreferrer">Official Website ↗</a>
+          <a href="https://app.concrete.xyz/" target="_blank" rel="noreferrer">Concrete App ↗</a>
+          <a href="https://points.concrete.xyz/home" target="_blank" rel="noreferrer">Points ↗</a>
+          <a href="https://docs.concrete.xyz/" target="_blank" rel="noreferrer">Documentation ↗</a>
+          <a href="https://x.com/ConcreteXYZ" target="_blank" rel="noreferrer">X / Twitter ↗</a>
+          <a href="https://paragraph.com/@concretexyz" target="_blank" rel="noreferrer">Blog ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">C</span><span>CONCRETE / EXPLAINED</span></div>
+    <p>This is an independent educational interface. Concrete branding and product names belong to their respective owners. Yield is not guaranteed; DeFi involves smart-contract, strategy, market and other risks.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
